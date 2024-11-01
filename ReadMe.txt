@@ -1,7 +1,6 @@
-This program was written by ZenOokami for a viewer
+This program was based on ZenOokami's code
 
-Feel free to use this code for learning/practice in order to create your own programs.
-I simply ask that you point some of your fellow new coders to our resources:
+ZenOokami's resources:
 
 Website: www.EssenceOfZen.org
 Contact Zen: ZaneBlalock@EssenceOfZen.org
