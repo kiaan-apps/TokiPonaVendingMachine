@@ -1,4 +1,4 @@
-This program was based on ZenOokami's code
+This program is based on ZenOokami's code
 
 ZenOokami's resources:
 
