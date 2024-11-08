@@ -1,13 +1,13 @@
 #Toki Pona Vending Machine
 #Based on ZenOokami's code
 #www.EssenceOfZen.org
-#Version 1.0
+#Version 1.1
 
 start = "\033[1m" #The start and end variables are to make bold text in Python
 end = "\033[0;0m"
 money = 10.00 #This will be the money used to purchase the snacks
-vending_machine = {"pan suwi":"0A", "telo suwi":"0B", "telo pi lape ala":"0C", "kili lili":"0D", "moku soweli":"0E", "namako 1 GBP lon poki sina":"1A", "namako 2 GBP lon poki sina":"1B", "namako 5 GBP lon poki sina":"1C", "namako 10 GBP lon poki sina":"1D", "namako 20 GBP lon poki sina":"1E", "namako mani wile lon poki sina":"1F"} #We created this hash (python calls them dictionaries) to list the items and their selection
-prices = {"pan suwi":"0.75 GBP", "telo suwi":"0.50 GBP", "telo pi lape ala":"1.25 GBP", "kili lili":"0.25 GBP", "moku soweli":"0.75 GBP", "namako "+start+"1 GBP"+end+" lon poki sina":"", "namako "+start+"2 GBP"+end+" lon poki sina":"", "namako "+start+"5 GBP"+end+" lon poki sina":"", "namako "+start+"10 GBP"+end+" lon poki sina":"", "namako "+start+"20 GBP"+end+" lon poki sina":"", "namako mani wile lon poki sina":""} #We created this hash to have the same keys as the first hash, but this time having prices be their values
+vending_machine = {"pan suwi":"0A", "telo suwi":"0B", "telo pi lape ala":"0C", "kili lili":"0D", "moku soweli":"0E", "namako e 1 GBP lon poki sina":"1A", "namako e 2 GBP lon poki sina":"1B", "namako e 5 GBP lon poki sina":"1C", "namako e 10 GBP lon poki sina":"1D", "namako e 20 GBP lon poki sina":"1E", "namako e mani wile lon poki sina":"1F"} #We created this hash (python calls them dictionaries) to list the items and their selection
+prices = {"pan suwi":"0.75 GBP", "telo suwi":"0.50 GBP", "telo pi lape ala":"1.25 GBP", "kili lili":"0.25 GBP", "moku soweli":"0.75 GBP", "namako e "+start+"1 GBP"+end+" lon poki sina":"", "namako e "+start+"2 GBP"+end+" lon poki sina":"", "namako e "+start+"5 GBP"+end+" lon poki sina":"", "namako e "+start+"10 GBP"+end+" lon poki sina":"", "namako e "+start+"20 GBP"+end+" lon poki sina":"", "namako e mani wile lon poki sina":""} #We created this hash to have the same keys as the first hash, but this time having prices be their values
 
 #==Debug Functions==================================
 def set_money(amount): #This function is used to set the amount of money
@@ -47,7 +47,7 @@ def transaction(user_input): #Function is made to take care of choosing said ite
 	elif user_input == "1E":
 		purchase(-20)
 	elif user_input == "1F":
-		maniWile = float(input("mani la mute seme li sina wile lon poki sina?")) #Adds a desired value to your account
+		maniWile = float(input("mani mute seme li sina wile lon poki sina?")) #Adds a desired value to your account
 		maniWile = maniWile*-1
 		purchase(maniWile)
 	else:
