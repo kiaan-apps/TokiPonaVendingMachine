@@ -3,7 +3,7 @@
 #www.EssenceOfZen.org
 #Version 1.0
 
-start = "\033[1m"
+start = "\033[1m" #The start and end variables are to make bold text in Python
 end = "\033[0;0m"
 money = 10.00 #This will be the money used to purchase the snacks
 vending_machine = {"pan suwi":"0A", "telo suwi":"0B", "telo pi lape ala":"0C", "kili lili":"0D", "moku soweli":"0E", "namako 1 GBP lon poki sina":"1A", "namako 2 GBP lon poki sina":"1B", "namako 5 GBP lon poki sina":"1C", "namako 10 GBP lon poki sina":"1D", "namako 20 GBP lon poki sina":"1E", "namako mani wile lon poki sina":"1F"} #We created this hash (python calls them dictionaries) to list the items and their selection
@@ -14,7 +14,6 @@ def set_money(amount): #This function is used to set the amount of money
 	global money
 	money = amount
 	
-
 
 #===================================================
 def purchase(needed_money): #Made this for personal ease. It simply keeps track of money after checking to see if you can buy said item.
@@ -63,7 +62,7 @@ def main(): #Main program
 	switch = 1 #In case you want to add a "different person" system
 	while switch == 1:
 		print("toki a! ni li ilo wile.") #Welcome Messages
-		print("ni li sona sina!")
+		print("ni li wile sina!")
 		for item, selection in vending_machine.items(): #This for loop will append items to the list item_list
 			item_list.append((item, selection))
 		
@@ -73,17 +72,17 @@ def main(): #Main program
 		print("ni li mani esun")
 		for item, price in prices.items(): #Prints the items and their prices on separate lines.
 			print(item, price)
-		print()	
+		print()
 		
 		user_switch = 1 #User Proof loop
 		while user_switch == 1:
 			print("sina jo e " + str(money) + " GBP")
-			user_input = input("mi wile poki sona sina: ").upper()
+			user_input = input("mi wile la o kepeken poki wile sina: ").upper()
 			transaction(user_input)
 			print()
 			choice = 1
 			while choice == 1: #User proof loop
-				user_input = input("sina pini kepeken ni anu seme?(k/a): ").lower()
+				user_input = input("sina pini kepeken e ni anu seme?(k/a): ").lower()
 				if user_input == "k" or user_input == "kepeken":
 					user_switch = 0
 					choice = 0
@@ -96,7 +95,7 @@ def main(): #Main program
 					choice = 1
 			
 		print("sina pona tawa kepeken ni ilo.")
-		print("mi mama ni kepeken sitelen lawa pi jan ZenOokami")
+		print("mi pali ni kepeken sitelen lawa pi jan ZenOokami")
 					
 				
 			
