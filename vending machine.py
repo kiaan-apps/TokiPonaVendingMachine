@@ -77,7 +77,7 @@ def main(): #Main program
 		user_switch = 1 #User Proof loop
 		while user_switch == 1:
 			print("sina jo e " + str(money) + " GBP")
-			user_input = input("mi wile la o kepeken poki wile sina: ").upper()
+			user_input = input("mi wile, o kepeken poki wile sina: ").upper()
 			transaction(user_input)
 			print()
 			choice = 1
