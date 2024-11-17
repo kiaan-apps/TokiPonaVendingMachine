@@ -64,7 +64,7 @@ def transaction(user_input): #Function is made to take care of choosing said ite
 		purchase(1.75)
 	elif user_input == "2F":
 		purchase(150)
-		print("tenpo ni la, sina esun e selo awen pi epiku mute en moku walo sike. ona li pakala la, mi ante e ona kan ala e mani.")
+		print("ni li selo awen pi epiku mute en moku walo sike. ona li pakala la, mi ante e ona kan ala e mani.")
 	else:
 		print("sina sitelen li pakala")
 	
